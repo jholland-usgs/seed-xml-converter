@@ -20,6 +20,6 @@ public class PolynomialTest {
 		B062 b062 = (B062) BlocketteFactory.create(text.getBytes());
 		Polynomial polynomial = PolynomialMapper.map(b062);
 		B062 b = PolynomialMapper.map(polynomial);
-		assertEquals("0620130P00000000MB+0.00000E+00+0.00000E+00+0.00000E+00+5.00000E+01+0.00000E+000002-8.39688E+01+0.00000E+00+2.56250E-03+0.00000E+00", b.toSeedString());
+		assertEquals("0620129P00000000MB+0.00000E+00+0.00000E+00+0.00000E+00+5.00000E+01+0.00000E+00002-8.39688E+01+0.00000E+00+2.56250E-03+0.00000E+00", b.toSeedString());
 	}
 }
