@@ -20,7 +20,7 @@ public class XmlToSeedFileConverterTest {
 
 		File xml = new File(XmlToSeedFileConverterTest.class.getClassLoader().getResource("IU_ANMO_BHZ.xml").getFile());
 
-		File convertedSeedFile = new File("/Users/Suleiman/converted.dataless");
+		File convertedSeedFile = new File("converted.dataless");
 		XmlToSeedFileConverter.getInstance().convert(xml, convertedSeedFile);
 
 		Volume volume = SeedUtils.load(convertedSeedFile);
