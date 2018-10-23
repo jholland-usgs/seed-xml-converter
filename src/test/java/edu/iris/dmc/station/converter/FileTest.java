@@ -10,7 +10,7 @@ public class FileTest {
 		// args=new String[]
 		// {"--output","/Users/Suleiman/converted.xml","--input","/Users/Suleiman/dataless/II_NNA.20180906T205825.dataless"};
 
-		args = new String[] { "--input", "/Users/Suleiman/AK_GAMB.dataless.032917", "--output",
+		args = new String[] { "--input", "/Users/Suleiman/dataless.CI.DJJB.061013", "--output",
 				"/Users/Suleiman/AK_GAMB.dataless.032917.xml", "--verbose" };
 
 		Application app = new Application();
