@@ -311,7 +311,7 @@ public class SeedToXmlDocumentConverter implements MetadataDocumentFormatConvert
 								stage.setResponseList(ResponseListMapper.map((B045) referenceBlockette));
 								break;
 							case 46:
-								//no generic response
+								// no generic response
 								break;
 							case 47:
 								stage.setDecimation(DecimationMapper.map((B047) referenceBlockette));
@@ -413,7 +413,7 @@ public class SeedToXmlDocumentConverter implements MetadataDocumentFormatConvert
 		if (channel.getResponse() != null && channel.getResponse().getInstrumentSensitivity() != null) {
 			Sensitivity sensitivity = channel.getResponse().getInstrumentSensitivity();
 			List<ResponseStage> list = channel.getResponse().getStage();
-			if (list != null) {
+			if (list != null && !list.isEmpty()) {
 				ResponseStage first = list.get(0);
 				sensitivity.setInputUnits(extractInputUnits(first));
 				ResponseStage last = list.get(list.size() - 1);
