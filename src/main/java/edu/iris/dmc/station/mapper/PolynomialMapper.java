@@ -165,13 +165,23 @@ public class PolynomialMapper extends AbstractMapper {
 
 		b.setFrequencyUnit('B');
 
-		b.setLowerBoundOfApproximation(p.getApproximationLowerBound().doubleValue());
-		b.setUpperBoundOfApproximation(p.getApproximationUpperBound().doubleValue());
+		if (p.getApproximationLowerBound() != null) {
+			b.setLowerBoundOfApproximation(p.getApproximationLowerBound().doubleValue());
+		}
+		if (p.getApproximationUpperBound() != null) {
+			b.setUpperBoundOfApproximation(p.getApproximationUpperBound().doubleValue());
+		}
 
-		b.setLowerValidFrequencyBound(p.getFrequencyLowerBound().getValue());
-		b.setUpperValidFrequencyBound(p.getFrequencyUpperBound().getValue());
+		if (p.getFrequencyLowerBound() != null) {
+			b.setLowerValidFrequencyBound(p.getFrequencyLowerBound().getValue());
+		}
+		if (p.getFrequencyUpperBound() != null) {
+			b.setUpperValidFrequencyBound(p.getFrequencyUpperBound().getValue());
+		}
 
-		b.setMaximumAbsoluteError(p.getMaximumError().doubleValue());
+		if (p.getMaximumError() != null) {
+			b.setMaximumAbsoluteError(p.getMaximumError().doubleValue());
+		}
 
 		if (p.getCoefficient() != null) {
 			for (Coefficient c : p.getCoefficient()) {
