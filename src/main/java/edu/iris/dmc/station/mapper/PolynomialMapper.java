@@ -116,29 +116,19 @@ public class PolynomialMapper extends AbstractMapper {
 			pType.setApproximationType("MACLAURIN");
 		}
 
-		if (b.getLowerBoundOfApproximation() != null) {
-			pType.setApproximationLowerBound(BigDecimal.valueOf(b.getLowerBoundOfApproximation()));
-		}
+		pType.setApproximationLowerBound(BigDecimal.valueOf(b.getLowerBoundOfApproximation()));
 
-		if (b.getUpperBoundOfApproximation() != null) {
-			pType.setApproximationUpperBound(BigDecimal.valueOf(b.getUpperBoundOfApproximation()));
-		}
+		pType.setApproximationUpperBound(BigDecimal.valueOf(b.getUpperBoundOfApproximation()));
 
-		if (b.getLowerValidFrequencyBound() != null) {
-			Frequency ft = factory.createFrequencyType();
-			ft.setValue(b.getLowerValidFrequencyBound());
-			pType.setFrequencyLowerBound(ft);
-		}
+		Frequency ft = factory.createFrequencyType();
+		ft.setValue(b.getLowerValidFrequencyBound());
+		pType.setFrequencyLowerBound(ft);
 
-		if (b.getUpperValidFrequencyBound() != null) {
-			Frequency ft = factory.createFrequencyType();
-			ft.setValue(b.getUpperValidFrequencyBound());
-			pType.setFrequencyUpperBound(ft);
-		}
+		ft = factory.createFrequencyType();
+		ft.setValue(b.getUpperValidFrequencyBound());
+		pType.setFrequencyUpperBound(ft);
 
-		if (b.getMaximumAbsoluteError() != null) {
-			pType.setMaximumError(BigDecimal.valueOf(b.getMaximumAbsoluteError()));
-		}
+		pType.setMaximumError(BigDecimal.valueOf(b.getMaximumAbsoluteError()));
 
 		int index = 1;
 		for (edu.iris.dmc.seed.control.station.Number n : b.getCoefficients()) {
