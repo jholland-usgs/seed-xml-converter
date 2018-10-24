@@ -286,7 +286,7 @@ public class SeedToXmlDocumentConverter implements MetadataDocumentFormatConvert
 						int sequence = s.getSequence();
 						if (sequence > channel.getResponse().getStage().size()) {
 							stage = new ResponseStage();
-							stage.setNumber(BigInteger.valueOf(b060.getStageSequence()));
+							stage.setNumber(BigInteger.valueOf(sequence));
 							channel.addStage(stage);
 						} else {
 							stage = channel.getResponse().getStage().get(sequence - 1);
